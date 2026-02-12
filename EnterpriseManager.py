@@ -6,10 +6,14 @@ class EnterpriseManager:
     def __init__(self):
         pass
 
-    def ValidateCIF( self, CiF ):
-        # PLEASE INCLUDE HERE THE CODE FOR VALIDATING THE GUID
-        # RETURN TRUE IF THE GUID IS RIGHT, OR FALSE IN OTHER CASE
-        return True
+    def ValidateCIF(self, CiF):
+        CiF = CiF.upper()
+        if len(CiF) != 9:
+            return False
+
+        letter = CiF[0]
+        number_block = CiF[1:8].rjust(7, '0')
+        control_char = CiF[8]
 
     def ReadproductcodefromJSON( self, fi ):
 
