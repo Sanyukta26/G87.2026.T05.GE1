@@ -1,5 +1,6 @@
-from UC3MConsulting import EnterpriseManager
 import string
+from UC3M_Consulting import EnterpriseManager
+
 
 #GLOBAL VARIABLES
 letters = string.ascii_letters + string.punctuation + string.digits
@@ -31,7 +32,7 @@ def main():
 
     mng = EnterpriseManager()
     res = mng.ReadproductcodefromJSON("test.json")
-    strRes = res.__str__()
+    strRes = str(res)
     print(strRes)
     EncodeRes = Encode(strRes)
     print("Encoded Res "+ EncodeRes)
