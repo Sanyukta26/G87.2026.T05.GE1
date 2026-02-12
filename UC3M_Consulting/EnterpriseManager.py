@@ -1,6 +1,13 @@
+"""
+Enterprise Manager module.
+Enterprise Management custom exception module.
+Handles enterprise data operations.
+"""
+
 import json
-from EnterpriseManagementException import EnterpriseManagementException
-from EnterpriseRequest import EnterpriseRequest
+from .EnterpriseManagementException import EnterpriseManagementException
+from .EnterpriseRequest import EnterpriseRequest
+
 
 class EnterpriseManager:
     def __init__(self):
@@ -41,7 +48,7 @@ class EnterpriseManager:
     def ReadproductcodefromJSON(self, fi):
 
         try:
-            with open(fi) as f:
+            with open(fi, encoding="utf-8") as f:
                 DATA = json.load(f)
         except FileNotFoundError as e:
             raise EnterpriseManagementException("Wrong file or file path") from e

@@ -115,7 +115,8 @@ unsafe-load-any-extension=no
 [BASIC]
 
 # Naming style matching correct argument names.
-argument-naming-style=snake_case
+#Modified Rule #11: Argument naming style can be anything
+argument-naming-style=any
 
 # Regular expression matching correct argument names. Overrides argument-
 # naming-style. If left empty, argument names will be checked with the set
@@ -123,7 +124,8 @@ argument-naming-style=snake_case
 #argument-rgx=
 
 # Naming style matching correct attribute names.
-attr-naming-style=snake_case
+#Modified Rule #10: Attribute naming convention can be anything
+attr-naming-style=any
 
 # Regular expression matching correct attribute names. Overrides attr-naming-
 # style. If left empty, attribute names will be checked with the set naming
@@ -151,7 +153,8 @@ class-attribute-naming-style=any
 #class-attribute-rgx=
 
 # Naming style matching correct class constant names.
-class-const-naming-style=UPPER_CASE
+#Modified Rule #8: Flexible naming style
+class-const-naming-style=any
 
 # Regular expression matching correct class constant names. Overrides class-
 # const-naming-style. If left empty, class constant names will be checked with
@@ -159,14 +162,15 @@ class-const-naming-style=UPPER_CASE
 #class-const-rgx=
 
 # Naming style matching correct class names.
-class-naming-style=PascalCase
+#Modified Rule #6: Keep class names as is
+class-naming-style=any
 
 # Regular expression matching correct class names. Overrides class-naming-
 # style. If left empty, class names will be checked with the set naming style.
 #class-rgx=
 
 # Naming style matching correct constant names.
-const-naming-style=UPPER_CASE
+const-naming-style=any
 
 # Regular expression matching correct constant names. Overrides const-naming-
 # style. If left empty, constant names will be checked with the set naming
@@ -177,8 +181,12 @@ const-naming-style=UPPER_CASE
 # ones are exempt.
 docstring-min-length=-1
 
+#Modified Rule #7: Ignore mandatory docstrings
+disable=C0114,C0115,C0116
+
 # Naming style matching correct function names.
-function-naming-style=snake_case
+#Modified Rule #9 Any naming convention for function
+function-naming-style=any
 
 # Regular expression matching correct function names. Overrides function-
 # naming-style. If left empty, function names will be checked with the set
@@ -208,15 +216,17 @@ inlinevar-naming-style=any
 # with the set naming style.
 #inlinevar-rgx=
 
+#Modified Rule #2 Flexible instead of snake case
 # Naming style matching correct method names.
-method-naming-style=snake_case
+method-naming-style=any
 
 # Regular expression matching correct method names. Overrides method-naming-
 # style. If left empty, method names will be checked with the set naming style.
 #method-rgx=
 
 # Naming style matching correct module names.
-module-naming-style=snake_case
+#Modified Rule #5: Allow PascalCase module names
+module-naming-style=any
 
 # Regular expression matching correct module names. Overrides module-naming-
 # style. If left empty, module names will be checked with the set naming style.
@@ -253,7 +263,8 @@ property-classes=abc.abstractproperty
 #typevartuple-rgx=
 
 # Naming style matching correct variable names.
-variable-naming-style=snake_case
+#Modified Rule #8 Allow legacy naming styles
+variable-naming-style=any
 
 # Regular expression matching correct variable names. Overrides variable-
 # naming-style. If left empty, variable names will be checked with the set
@@ -346,6 +357,8 @@ ignore-long-lines=^\s*(# )?<?https?://\S+>?$
 # Number of spaces of indent required inside a hanging or continued line.
 indent-after-paren=2
 
+#Modified Rule #3
+
 # String used as indentation unit. This is usually "    " (4 spaces) or "\t" (1
 # tab).
 indent-string='    '
@@ -427,7 +440,6 @@ confidence=HIGH,
            INFERENCE,
            INFERENCE_FAILURE,
            UNDEFINED
-
 # Disable the message, report, category or checker with the given id(s). You
 # can either give multiple identifiers separated by comma (,) or put this
 # option multiple times (only on the command line, not in the configuration

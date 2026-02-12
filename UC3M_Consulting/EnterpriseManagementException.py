@@ -10,4 +10,3 @@ class EnterpriseManagementException(Exception):
     @message.setter
     def message(self,value):
         self.__message = value
-
