@@ -39,6 +39,7 @@ class EnterpriseManager:
         return control_char == expected_control
 
     def ReadproductcodefromJSON(self, fi):
+
         try:
             with open(fi) as f:
                 DATA = json.load(f)
@@ -54,9 +55,8 @@ class EnterpriseManager:
             req = EnterpriseRequest(T_CIF, T_PHONE, E_NAME)
         except KeyError as e:
             raise EnterpriseManagementException("JSON Decode Error - Invalid JSON Key") from e
-
         if not self.ValidateCIF(T_CIF):
-            raise EnterpriseManagementException("Invalid CIF")
+            raise EnterpriseManagementException("Invalid FROM IBAN")
         return req
 
 # Optional: quick test block

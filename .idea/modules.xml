@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../PycharmProjects/ExampleEG2/.idea/ExampleEG2.iml" filepath="$PROJECT_DIR$/../PycharmProjects/ExampleEG2/.idea/ExampleEG2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/G87.2026.TSS.GE1.iml" filepath="$PROJECT_DIR$/.idea/G87.2026.TSS.GE1.iml" />
     </modules>
   </component>
