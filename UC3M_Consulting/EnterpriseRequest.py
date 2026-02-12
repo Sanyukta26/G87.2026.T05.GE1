@@ -8,8 +8,7 @@ class EnterpriseRequest:
         self.__cIF = Cif
         self.__pHONe = phOnE
         justnow = datetime.utcnow()
-        self.__timeStamp = datetime.timestamp(justnow)
-
+        self.__timeStamp = datetime.timestamp(justnow) # pylint: disable=unused-private-member
 
     def __str__(self):
         return "Enterprise:" + json.dumps(self.__dict__)
