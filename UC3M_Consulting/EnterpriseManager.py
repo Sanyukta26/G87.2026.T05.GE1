@@ -3,11 +3,9 @@ Enterprise Manager module.
 Enterprise Management custom exception module.
 Handles enterprise data operations.
 """
-
 import json
-from .EnterpriseManagementException import EnterpriseManagementException
-from .EnterpriseRequest import EnterpriseRequest
-
+from UC3M_Consulting.EnterpriseManagementException import EnterpriseManagementException
+from UC3M_Consulting.EnterpriseRequest import EnterpriseRequest
 
 class EnterpriseManager:
     def __init__(self):
