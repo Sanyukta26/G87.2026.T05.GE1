@@ -116,6 +116,7 @@ unsafe-load-any-extension=no
 
 # Naming style matching correct argument names.
 #Modified Rule #11: Argument naming style can be anything
+#Naming convention has to be snake case
 argument-naming-style=any
 
 # Regular expression matching correct argument names. Overrides argument-
@@ -125,6 +126,7 @@ argument-naming-style=any
 
 # Naming style matching correct attribute names.
 #Modified Rule #10: Attribute naming convention can be anything
+#Naming convention has to be snake case
 attr-naming-style=any
 
 # Regular expression matching correct attribute names. Overrides attr-naming-
@@ -154,6 +156,7 @@ class-attribute-naming-style=any
 
 # Naming style matching correct class constant names.
 #Modified Rule #8: Flexible naming style
+#Const naming style is all caps
 class-const-naming-style=any
 
 # Regular expression matching correct class constant names. Overrides class-
@@ -162,7 +165,8 @@ class-const-naming-style=any
 #class-const-rgx=
 
 # Naming style matching correct class names.
-#Modified Rule #6: Keep class names as is
+#Modified Rule #6: Keep class names flexible
+# Class names should be PascalCase
 class-naming-style=any
 
 # Regular expression matching correct class names. Overrides class-naming-
@@ -182,10 +186,12 @@ const-naming-style=any
 docstring-min-length=-1
 
 #Modified Rule #7: Ignore mandatory docstrings
+#Modules, classes, and functions must include docstrings
 disable=C0114,C0115,C0116
 
 # Naming style matching correct function names.
 #Modified Rule #9 Any naming convention for function
+#Rule: Snake case
 function-naming-style=any
 
 # Regular expression matching correct function names. Overrides function-
@@ -217,7 +223,7 @@ inlinevar-naming-style=any
 #inlinevar-rgx=
 
 #Modified Rule #2 Flexible instead of snake case
-# Naming style matching correct method names.
+# Naming style is snake case matching correct method names.
 method-naming-style=any
 
 # Regular expression matching correct method names. Overrides method-naming-
@@ -225,7 +231,8 @@ method-naming-style=any
 #method-rgx=
 
 # Naming style matching correct module names.
-#Modified Rule #5: Allow PascalCase module names
+#Modified Rule #5: Ignore module name
+#Naming style should be snake case
 module-naming-style=any
 
 # Regular expression matching correct module names. Overrides module-naming-
@@ -305,9 +312,8 @@ exclude-too-few-public-methods=
 # R0901)
 ignored-parents=
 
-# MODIFIED RULE #3: Allowing up to 7 arguments
 # Maximum number of arguments for function / method.
-max-args=7
+max-args=5
 
 # Maximum number of attributes for a class (see R0902).
 max-attributes=7
@@ -318,26 +324,26 @@ max-bool-expr=5
 # Maximum number of branch for function / method body.
 max-branches=12
 
-# MODIFIED RULE #13: Changing max locals to 20
-# Maximum number of locals for function / method body.
+# Modified Rule #13 Maximum number of locals for function / method body.
+#Max locals is 15
 max-locals=20
 
 # Maximum number of parents for a class (see R0901).
 max-parents=7
 
-# MODIFIED RULE #4: Allowing up to 8 positional arguments
-# Maximum number of positional arguments for function / method.
+#Modified Rule #4: Allowing up to 7 positional arguments
+# Maximum number of positional arguments for function / method is 5
 max-positional-arguments=8
 
 # Maximum number of public methods for a class (see R0904).
 max-public-methods=20
 
-# MODIFIED RULE #14: Changing max returns to 10
-# Maximum number of return / yield for function / method body.
+# Modified Rule #14 Maximum number of return / yield for function / method body is 10
+#Rule: max returns is 6
 max-returns=10
 
-# MODIFIED RULE #15: Changing max statements to 80
-# Maximum number of statements in function / method body.
+# Modified Rule #15: Maximum number of statements in function / method body is 80
+#Rule: Max number of statements in function is 50
 max-statements=80
 
 # Minimum number of public methods for a class (see R0903).
@@ -359,10 +365,11 @@ expected-line-ending-format=
 ignore-long-lines=^\s*(# )?<?https?://\S+>?$
 
 # MODIFIED RULE #1: Changed indentation to 2 spaces for a more compact code style
-# Number of spaces of indent required inside a hanging or continued line.
+# Number of spaces of indent required inside a hanging or continued line is 4.
 indent-after-paren=2
 
-
+#Modified Rule #3 Allowing up to 7 arguments
+# Functions should have a limited number of arguments for readability
 # String used as indentation unit. This is usually "    " (4 spaces) or "\t" (1
 # tab).
 indent-string='    '
